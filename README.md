@@ -34,6 +34,9 @@ Users should be able to:
 - How to animate a dropdown menu
 - How to create triangles using pseudo-elements
 
+### Continued development
+- Still can't fully grasp the size attribute
+
 ### Useful resources
 - (https://alvarotrigo.com/blog/drop-down-menu-javascript/) : Alvaro Triago provides great examples of how to create and animate dropdown menus. His notes in each examples are detailed and easy to understand.
 
