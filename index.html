@@ -24,9 +24,9 @@
 <body>
   <header>
     <div class="menu-container">
-      <a href="#" class="logo-link"><img src="./images/logo.svg" alt="Sunnyside Logo" class="logo" width="100" height="100"></a>
+      <a href="#" class="logo-link" aria-label="sunnyside logo will take you to home page"><img src="./images/logo.svg" alt="Sunnyside Logo" class="logo" width="100" height="100"></a>
 
-      <nav class="header-nav">
+      <nav id="header-nav">
         <button class="hamburger-menu-icon"><img src="./images/icon-hamburger.svg" alt="hamburger menu" width="50" height="50"></button>
         <ul class="nav-menu">
           <li class="nav-item"><a href="#" class="nav-link" aria-label="About">About</a></li>
@@ -58,7 +58,12 @@
           </div>   
         </div>
 
-        <img 
+        <picture class="transform">
+          <source media="(max-width: 768px)" srcset="./images/mobile/image-transform.jpg">
+          <source media="(min-width: 769px)" srcset="./images/desktop/image-transform.jpg">
+          <img src="./images/desktop/image-transform.jpg" alt="Picture of an egg with a yellow background">
+        </picture>
+        <!-- <img 
         src="./images/desktop/image-transform.jpg" 
         srcset="./images/desktop/image-transform.jpg 720w, ./images/mobile/image-transform.jpg 750w"
         sizes="(min-width: 769px) 720px, (max-width: 768px) 750px"
@@ -66,7 +71,7 @@
         class="article-image transform" 
         height="100"
         width="100"
-        >
+        > -->
       </article>
 
       <article>
@@ -81,16 +86,11 @@
           </div>
         </div>
         
-        <img 
-        src="./images/desktop/image-stand-out.jpg"
-        srcset="./images/desktop/image-stand-out.jpg 720w, ./images/mobile/image-stand-out.jpg 750w" 
-        sizes="(min-width: 769px) 720px, (max-width: 768px) 750px"
-        alt="A pink plastic wine glass with a pink background" 
-        class="article-image standout" 
-        loading="lazy"
-        height="100"
-        width="100"
-        >
+        <picture class="standout">
+          <source media="(max-width: 768px)" srcset="./images/mobile/image-stand-out.jpg">
+          <source media="(min-width: 769px)" srcset="./images/desktop/image-stand-out.jpg">
+          <img src="./images/desktop/image-stand-out.jpg" alt="A pink plastic wine glass with a pink background">
+        </picture>
       </article>
 
       <article>
@@ -158,37 +158,38 @@
 
   <footer>
     <div class="footer-images">
-      <img src="./images/desktop/image-gallery-milkbottles.jpg" 
+
+      <picture>
+        <source media="(max-width: 768px)" srcset="./images/mobile/image-gallery-milkbottles.jpg">
+        <source media="(min-width: 769px)" srcset="./images/desktop/image-gallery-milkbottles.jpg">
+        <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="Picture of milk bottles">
+      </picture>
+      <!-- <img src="./images/desktop/image-gallery-milkbottles.jpg" 
       srcset="./images/desktop/image-gallery-milkbottles.jpg 720w,./images/mobile/image-gallery-milkbottles.jpg 376w"
       sizes="(min-width: 769px) 720px, (max-width) 376px"
       height="100"
       width="100"
       loading="lazy"
       alt="milk bottles"
-      >
-      <img src="./images/desktop/image-gallery-orange.jpg"
-      srcset="./images/desktop/image-gallery-orange.jpg 720w, ./images/mobile/image-gallery-orange.jpg 376w"
-      sizes="(min-width: 769px) 720px, (max-width) 376px"
-      height="100"
-      width="100"
-      loading="lazy" 
-      alt="A sliced orange in a white bowl">
+      > -->
 
-      <img src="./images/desktop/image-gallery-cone.jpg"
-      srcset="./images/desktop/image-gallery-cone.jpg 720w, ./images/mobile/image-gallery-cone.jpg 376w"
-      sizes="(min-width: 769px) 720px, (max-width) 376px"
-      height="100"
-      width="100"
-      loading="lazy" 
-      alt="Ice cream cone">
+      <picture>
+        <source media="(max-width: 768px)" srcset="./images/mobile/image-gallery-orange.jpg">
+        <source media="(min-width: 769px)" srcset="./images/desktop/image-gallery-orange.jpg">
+        <img src="./images/desktop/image-gallery-orange.jpg" alt="Picture of half an orange in a white bowl">
+      </picture>
 
-      <img src="./images/desktop/image-gallery-sugarcubes.jpg" 
-      srcset="./images/desktop/image-gallery-sugarcubes.jpg 720w, ./images/mobile/image-gallery-sugarcubes.jpg 376w"
-      sizes="(min-width: 769px) 720px, (max-width) 376px"
-      height="100"
-      width="100"
-      loading="lazy"
-      alt="Suger cubes stacked on one another with a pink background">
+      <picture>
+        <source media="(max-width: 768px)" srcset="./images/mobile/image-gallery-cone.jpg">
+        <source media="(min-width: 769px)" srcset="./images/desktop/image-gallery-cone.jpg">
+        <img src="./images/desktop/image-gallery-cone.jpg" alt="Picture of an icecream cone with a blue background">
+      </picture>
+
+      <picture>
+        <source media="(max-width: 768px)" srcset="./images/mobile/image-gallery-sugar-cubes.jpg">
+        <source media="(min-width: 769px)" srcset="./images/desktop/image-gallery-sugarcubes.jpg">
+        <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="Picture of sugar cubes stacked on one another with a pink background">
+      </picture>
     </div>
 
     <div class="footer-nav">
@@ -213,3 +214,5 @@
   </footer>
 </body>
 </html>
+
+<!-- Use the picture element instead of srcset and sizes -->
